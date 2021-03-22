@@ -1,0 +1,13 @@
+/vendor
+/node_modules
+/public/storage
+/public/avatar
+/photos
+Homestead.yaml
+Homestead.json
+.env
+.vagrant
+.DS_Store
+public/uploads
+sftp-config.json
+test/

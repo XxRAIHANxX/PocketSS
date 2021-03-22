@@ -1,0 +1,409 @@
+.wp-caption { 
+}
+.wp-caption .wp-caption-text { 
+}
+.wp-caption img { 
+}
+.gallery-caption { 
+}
+.bypostauthor {
+}
+.alignleft {
+}
+.alignright {
+}
+.aligncenter {
+}
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+.vc_custom_1448548324518 {
+    margin-bottom: 0px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    background-image: url(http://azexo.com/sportak/wp-content/uploads/2015/10/the-ball-488700_1920-e1445615362721-blackwhite-1.jpg?id=471) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background: rgb(0, 0, 0) !important;
+}
+
+.site-header .header-main .site-title img {
+    -webkit-transition: all 0.5s ease-out;
+    -khtml-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    position: relative;
+    z-index: 1;
+    top: -30px;
+}
+.site-header #secondary {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -30px !important;
+}
+
+.site-header.scrolled .header-main {
+    position: relative;
+ }
+
+.panel {
+margin-bottom: 0;
+background-color: transparent;
+border: none;
+border-radius: 0px;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: none;
+}
+
+.login {
+    padding: 100px 0;
+    
+}
+
+.btn, .form-control {
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.login-panel {
+    
+    padding: 20px;
+    color: black;
+}
+
+.register-panel {
+    
+    padding: 20px;
+    color: black;
+}
+
+.margin-top{
+	margin-top: 20px;
+}
+
+.content {
+    padding: 50px 0;
+    color: black;
+    font-weight: 100 !important;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center;
+    align-content: stretch;
+    cursor: pointer;
+    padding: 4.1%;
+}
+
+.border{
+    border:1px solid #ccc;
+    border-bottom:none;
+    padding: 10px
+}
+
+#avatar{
+    object-fit: cover;
+}
+
+.theme-color{
+    color:#ffa019;
+}
+
+span.label.label-danger.count {
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.btn{
+    background: #D7FF00;
+    color: black;
+    border: none;
+}
+
+.btn:hover  , .btn:focus , .btn:active{ 
+    background: #000;
+    color: white;
+    border: none;
+}
+
+.fc-sat { 
+    color:#ffa019; 
+    opacity: 1 !important;
+}
+.fc-sun {
+ color:#ffa019;
+ opacity: 1 !important;
+ }
+
+.disabled{
+    color:white;
+    opacity: 0.1 !important;
+}
+
+
+.fc table {
+    width: 100%;
+    box-sizing: border-box;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    background: rgba(27, 54, 98, 0.7);
+}
+
+.btn-danger , .btn-danger:hover{
+    background: red;
+    color: white;
+}
+
+li.social i {
+    background: #ffa019;
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+li.social a:hover i{
+    background: #fff;
+}
+
+.result{
+    font-size: 14px;
+}
+.margin-top{
+    margin-top: 40px;
+}
+.padding{
+    padding: 0 50px
+}
+
+span.circle {
+    font-size: 40px;
+    border-radius: 50%;
+    border: 5px solid;
+    padding: 10px 22px;
+    position: relative;
+    top: 25px;
+    font-weight: bold;
+}
+
+.orange{
+    color: #ffa019;
+}
+
+
+.how-to-work{
+    color: white;
+    font-size: 16px;
+    background-size: cover;
+}
+
+
+.blackbg{
+    background: #ffa019 !important;
+}
+
+.lightbg{
+    background: rgba(0,0,0,0.85);
+}
+
+.white{
+    color: white;
+}
+
+.vc_custom_1448547360811 {
+    margin-bottom: 0px !important;
+    /*background-image: url(http://azexo.com/sportak/wp-content/uploads/2015/10/About2-e1445929222597-1.jpg?id=429) !important;*/
+    background-position: 0% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding-top: 60px;
+}
+
+.carousel-wrapper.trainers {
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 90px !important;
+}
+
+.carousel-control {
+    background: none !Important;
+    margin: -70px;
+}
+
+.carousel {
+    position: relative;
+}
+
+@media(max-width: 676px){
+    .mt{
+        margin-top: 50px;
+    }
+
+body{
+        overflow-x: hidden;
+        height: 100vh;
+}
+}
+
+.lh{
+    line-height: 2;
+}
+
+.gray{
+    color: gray;
+}
+
+label{
+    font-weight: bold;
+}
+
+.bgoverlay {
+    background: rgba(0,0,0,0.75);
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.bgblue {
+    background: #000;
+    padding: 90px 0;
+}
+
+.bgorange{
+    padding: 15px 0;
+    background: #ff6500;
+    color: white;
+}
+
+.padding{
+    margin:50px 0;
+}
+
+.white{
+    color: white;
+}
+
+.how-to-play img{
+    width: 200px;
+}
+
+.score-panel{
+    margin-top: 50px;
+    min-height: 150px;
+}
+
+.border.dashed{
+        border:1px dashed black;
+        padding: 5px;
+        position: relative;
+}
+
+.img-circle {
+    border-radius: 50%;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+}
+.table {
+    color: black;
+}
+
+.playerpoint {
+    position: absolute;
+    top: 0px;
+    background: #ffa019;
+    color: white;
+    width: 50px;
+    right: 0;
+    border-radius: 0 0 0 100%;
+    text-align: right;
+    padding: 10px;
+    height: 50px;
+}
+select{
+    font-size:20px !important;
+}
+
+
+.category{
+    background: #000;
+    padding: 50px;
+}
+.category img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.category h3 , .category h5{
+    color: white;
+}
+
+.container-fluid{
+    padding: 0 !important;
+}
+.playerpic{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.score-panel p{
+    color: #000;
+}
+
+.table-striped {
+    font-size:15px;
+}
+
+.table-striped img{
+    width: 50px;
+}
+
+.border1 {
+    border: 1px solid rgba(235, 235, 235, 0.99);
+    padding: 10px;
+}
+
+@media(max-width: 767px){
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
+    {
+        padding: 5px 2px;
+    }
+}
+

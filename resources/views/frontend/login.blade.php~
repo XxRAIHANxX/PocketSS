@@ -1,0 +1,255 @@
+@extends('frontend.template.index')
+@section('title','Login')
+@section('header')
+{!!FHelper::breadcrumb('Login')!!}
+@stop
+@section('style')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<style>
+body{
+	/*background: url('http://azexo.com/sportak/wp-content/uploads/2015/10/slider-e1445958389451.jpg');*/
+	background-color:#003366;
+	background-position:center;
+}
+
+</style>
+@stop
+@section('content')
+
+@foreach (['error', 'warning', 'success', 'info'] as $msg)
+@if(Session::has($msg))
+<script>
+swal({
+	title: "{{Session::get($msg)}}",   
+	type: "{{$msg}}", 
+	});
+</script>
+@endif
+@endforeach
+@if ($errors->has())
+            @foreach ($errors->all() as $error)
+			<script>
+			swal({
+			title: "{{$error}}",   
+			type: "error", 
+			});
+			</script>
+            @endforeach
+        </div>
+        @endif
+<div class="login">
+	<div class="container">
+		<div class="row">
+		
+		
+			<div class="col-md-4">
+
+				<div class="register-panel">
+
+					<form action="{{url()}}/register" method="POST" role="form">
+
+						<div class="form-group text-center">
+
+							<h1 style="color:white">Register</h1>
+
+						</div>
+
+						<div class="form-group text-center">
+
+							<img src="{{url()}}/logo.png" alt="">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Name</label>
+
+							<input required="" type="text" name="name" class="form-control" id="" placeholder="Name">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Email</label>
+
+							<input required="" type="text" name="email" class="form-control" id="" placeholder="E-mail Address">
+
+						</div>
+
+						
+
+						<div class="form-group">
+
+							<label for="">Password</label>
+
+							<input required="" type="password" name="password" class="form-control" id="" placeholder="Password">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Repeat Password</label>
+
+							<input required="" type="password" class="form-control" name="password_confirm" id="password" placeholder="Repeat Password">
+
+						</div>
+					<!--
+						<div class="form-group">
+
+							<label for="">Pick one that best suit you</label>
+
+							<select class="form-control" id="suit_list" name="suit_list">
+
+				        	<option value="">-Select One-</option>
+
+				            <option value="Neutral">Neutral</option>
+
+				            <option value="Aggressive">Aggressive</option>
+
+				            <option value="Just for Fun">Just for Fun</option>
+
+				        </select>
+						
+						</div>-->
+
+						<div class="form-group">
+
+							<label for="">Phone</label>
+
+							<input required="" type="text" name="telephone" class="form-control" id="" placeholder="Phone Number">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Date of birth</label>
+
+							<input required="" type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of birth">
+
+						</div>
+
+						<div class="margin-top"></div>
+
+						{{csrf_field()}}
+
+						<button type="submit" style="width:150px" class="btn btn-info">Register</button>
+
+					</form>
+
+				</div>
+
+			</div>
+			
+			<div class="col-md-4">
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<h1 style="color:white;font-size:100px;text-align:center">- OR -</h1>
+
+
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+				<div class="margin-top"></div>
+
+				&nbsp;
+
+			</div>
+			
+
+		<div class="col-md-4">
+
+				<div class="margin-top"></div>
+
+								&nbsp;
+
+				<div class="margin-top"></div>
+
+
+
+				<div class="login-panel">
+
+
+
+					<form action="{{url()}}/login" method="POST" role="form">
+
+						<div class="form-group text-center">
+
+							<h1 style="color:white">Login</h1>
+
+						</div>
+
+						<div class="form-group text-center">
+
+							<img src="{{url()}}/logo.png" alt="">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Email</label>
+
+							<input name="email" required="" type="text" class="form-control" id="" placeholder="E-mail Address">
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="">Password</label>
+
+							<input name="password" required="" type="password" class="form-control" id="" placeholder="Password">
+
+						</div>
+
+						<div class="form-group">
+
+							<label><input type="checkbox" name="remember" value="1"> Remember me?</label>
+
+						</div>
+
+						<div class="margin-top"></div>
+
+						{{csrf_field()}}
+
+						<button type="submit" style="width:150px" class="btn btn-info">Login</button>
+
+						<a href="{{url()}}/forget" style="color:white;position:relative;top:4px" class="pull-right">Forget password?</a>
+
+					</form>
+
+				</div>
+
+			</div>
+			
+		
+		</div>
+	</div>
+</div>
+@stop
+@section('script')
+@stop

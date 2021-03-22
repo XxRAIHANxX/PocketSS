@@ -1,0 +1,107 @@
+@extends('backend.template.index')
+@section('title','Scores')
+@section('breadcrumb','Scores')
+@section('style')
+    <link rel="stylesheet" type="text/css" href="{{url()}}/public/backend/plugins/bootstrap-sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="{{url()}}/public/backend/plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+@stop
+@section('content')
+<div class="table-responsive"> 
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<input type="text" id="date" class="datepicker form-control" placeholder="Select Date" value="">
+	</div>
+</div>
+<table id="table" class="table table-striped table-bordered table-hover display">
+	<thead>
+		<tr>
+			<th>Sr.</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Points</th>
+			<th width="120"></th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+</div>
+@stop
+@section('script')
+<script type="text/javascript" src="{{url()}}/public/backend/plugins/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript" src="{{url()}}/public/backend/plugins/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+	$('.datepicker').datetimepicker({
+		        format: "DD, MMMM YYYY" ,
+		        maxDate: new Date(), 
+		        defaultDate: new Date(),    
+	}).on('dp.change',function(e){
+		alert(e.date.format('DD, MMMM YYYY'));
+	});
+
+
+
+	$('#table').DataTable({
+	JQueryUI: true,
+	processing: true,
+	serverSide: true,
+	ajax: {
+		'url' : '{{url()}}/backend/points/data',
+	},
+	order: [ [0, 'desc']] ,
+
+	columns: [
+	{data: 'id', name: 'id'},
+	{data: 'name', name: 'name'},
+	{data: 'email', name: 'email'},
+	{data: 'points', name: 'points'},
+	{data: 'action', name: 'action', orderable: false, searchable: false}
+	],
+	fnRowCallback : function(nRow, aData, iDisplayIndex) {
+	$("td:nth-child(1)", nRow).html(iDisplayIndex + 1);
+	return nRow;
+	},
+	destroy: true
+	});
+
+	$('body').on('click','.add-to-wallet',function(){
+		amt = $(this).closest('tr').find('.wallet').val();
+			if(amt)
+			that = $(this);
+			swal({   
+				title: "Please confirm you are adding "+amt+" points to user account.",   
+				text: "Please confirm your action!",  
+				type: "info",
+				html: true ,   
+				showCancelButton: true,   
+				closeOnConfirm: false,
+				animation: "slide-from-top",    
+				showLoaderOnConfirm: true, 
+				confirmButtonText: "Yes", 
+			}, 
+			function(){   
+				$.ajax({
+					url: '{{url()}}/backend/points/confirm/'+$(that).closest('tr').find('.wallet').data('id'),
+					type: 'POST',
+					data: {
+						'amt':amt ,
+						'_token': '{{csrf_token()}}'
+					},
+					success: function(html){
+						$(that).closest('tr').find('.wallet').val('');
+						$(that).closest('tr').find('.amount').html(parseInt($(that).closest('tr').find('.amount').html())+parseInt(amt));
+						swal(html);
+					}
+				});
+			});
+	});
+
+	});
+</script>
+@stop
